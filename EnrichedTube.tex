@@ -494,12 +494,28 @@ is the composite
 where we suppress all coherence isomorphisms $\nu,\varphi$ for $\overline{\,\cdot\,}$.
 
 \begin{lem}
-$\Tube_\cV(\cC)$ is a $*$-algebra object in $\cV$.
+$\Tube_\cV(\cC)$ is a $\Cstar$-algebra object in $\cV$.
 \end{lem}
 \begin{proof}
 That $\Tube_\cV(\cC)$ is an algebra object uses that the graphical calculus of strings on tubes is well-defined from \cite{1607.06041}, together with the fact that the tube algebra $\Tube(\cC)$ is an associative multiplication under \eqref{eq:MultiplicationInTubeAlgebra}.
 One can also prove this directly using the relations in \cite{MR3578212} similar to the proof of Prop.~5.12 therein.
-\nn{finish}
+
+\todo{It's a $*$-algebra}
+
+To show it's $\Cstar$, we calculate
+\begin{align*}
+\cV(1_\cV \to \Tube_\cV(\cC))
+&\cong
+\bigoplus_{c,x,y\in \Irr(\cC)} \cV(1_\cV \to \Tr_\cV(y\otimes c\otimes \overline{x} \otimes \overline{c})
+\\&\cong
+\bigoplus_{c,x,y\in \Irr(\cC)} \cC(1_\cC \to y\otimes c\otimes \overline{x} \otimes \overline{c})
+\\&\cong
+\bigoplus_{c,x,y\in \Irr(\cC)} \cC(c\otimes x \to y\otimes c)
+=
+\Tube(\cC)
+\end{align*}
+One shows that the $*$-algebra structures agree \todo{!}, and thus $\cV(1_\cV \to \Tube_\cV(\cC))$ is a $\Cstar$-algebra, and thus has a state.
+One then uses GNS to prove $\Tube_\cV(\cC)$ is a $\Cstar$ algebra object.
 \end{proof}
 
 \todo{
